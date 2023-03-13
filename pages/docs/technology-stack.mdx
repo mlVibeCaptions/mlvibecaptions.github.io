@@ -1,0 +1,32 @@
+import Image from "next/image";
+import tech from '../../data/tech/repo-stack-trance.png';
+import techflow from '../../data/tech/tech-flow-apps-dark.png';
+
+# Technology stack
+
+The implementation of DL models requires a special design in software development. For the purposes of this research I created a stack of applications through which the process sequence mentioned above is defined. These applications are discrete pieces of software, each responsible for executing a predefined set of processes. These discrete processes function in a supportive manner to the overall data flow in the MLVC. That is, each discrete application executes and feeds data to the next application, thereby creating a pipeline of continuous process flow and data extraction.
+
+## Repositories
+
+| App                                                                          | Language   | Framework | Type              |
+|:-----------------------------------------------------------------------------|:-----------|:----------|:------------------|
+| ![](https://img.shields.io/static/v1?label=&message=MLVC-SND&color=ee3377)   | Typescript | Node js   | Date scraper      |
+| ![](https://img.shields.io/static/v1?label=&message=MLVC-API&color=80EA6E)   | Java       | Spring    | Dataset API       |
+| ![](https://img.shields.io/static/v1?label=&message=MLVC-AUDIO&color=1E7FFF) | Python     | Pytorch   | Development model |
+| ![](https://img.shields.io/static/v1?label=&message=MLVC-MODEL&color=635BFF) | Python     | Flask     | Production model  |
+| ![](https://img.shields.io/static/v1?label=&message=MLVC-APP&color=3CA6A6)   | Typescript | React js  | Web prototype     |
+
+## Implementations
+The implementation and development of MLVC consists of 6 distinct applications. Each application is implemented in a different programming language depending on the process it performs.
+
+The design takes into account the communication between the applications, strictly relying on the workflow design I mentioned above. Each application meets the functional needs within the MLVC lifecycle.Furthermore, it is a standalone code package and is maintained separately.
+Each part of the stack corresponds to one of the applications, where each application consists of layers that correspond to the technologies used. The visualization in the technology stack is presented in diagram above.
+
+The goal is to create a software pipeline through which to facilitate the development and construction of DL models. At the same time through this design to achieve a smoother execution of experiments and measurements.
+The design principle of the software pipeline is implemented on the continuous integration (CI) technique.
+
+## Visualization
+<Image src={tech} width={1000} height={500} />
+
+## Software distribution
+<Image src={techflow} width={1000} height={500} />

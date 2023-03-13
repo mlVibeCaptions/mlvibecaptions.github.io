@@ -1,0 +1,109 @@
+import Image from "next/image";
+import loss from '../../../data/experiment-4/Feb18_21-07-48-train-valid-loss.png';
+import acc from '../../../data/experiment-4/Feb18_21-07-48-train-valis-acc.png';
+import cf from '../../../data/experiment-4/Feb18_21-07-48-matrix.png';
+import acc_class from '../../../data/experiment-4/Feb18_21-07-48-class-acc.png';
+import pr_curves from '../../../data/experiment-4/Feb18_21-07-48-pr-curves.png';
+
+# Experiment 4
+
+
+![](https://img.shields.io/static/v1?label=Tensorboard_log&message=Feb18_21-07-48&color=ff7043)
+
+Binary classification with validation set implementation.
+
+## Parameters
+### basic setting parameters
+clip_length: 5.0 # [sec]
+
+### preprocessing parameters
+sample_rate: `44100`
+
+hop_length: `512`
+
+n_fft: `1024`
+
+n_mels: `64`
+
+
+### Training parameters
+
+number of audio samples: `220500`
+
+learning rate: `0.001`
+
+batch size: `30`
+
+number of epochs: `20`
+
+number of samples: `72`
+
+balanced dataset: `False`
+
+random clip cut: `False`
+
+scheduler: `True`
+
+## Classes
+### Labels
+
+` grime `
+` jazz `
+### Class distribution
+
+| Dataset | Class        | Class ID |    Samples |
+|:------- | :------------ | :---------: | ----------: |
+| Train | `grime` `jazz`       |    [0, 1]    | 146 |
+|Validation| `grime` `jazz`        |    [0, 1]     |    22 |
+|Test | `grime` `jazz`        |    [0, 1]     |    56 |
+
+## Metrics
+
+| ID        | Epochs |    Batch | Classes| LR | samples | Loss | Accuracy |
+| :------------ | :---------: | ----------: |  ----------: | ----------: | ----------: | ----------: | ----------: |
+| Feb18_21-07-48        |    50    | 73 | 2| 0.001 | 146  | 0.14 | 0.95 |
+
+### Cross entropy
+
+
+Validation loss is higher than training set. This means the model has gone overfit.
+
+---
+### Loss
+<Image src={loss} width={900} height={400}/>
+
+![](https://img.shields.io/static/v1?label=Loss&message=Training&color=33bbee)
+
+![](https://img.shields.io/static/v1?label=Loss&message=Validation&color=ee3377)
+
+
+---
+
+### Accuracy
+
+<Image src={acc} width={900} height={400}/>
+
+![](https://img.shields.io/static/v1?label=Accuracy&message=Training&color=009988)
+
+![](https://img.shields.io/static/v1?label=Accuracy&message=Validation&color=bbbbbb)
+
+---
+
+### Class Accuracy
+
+<Image src={acc_class} width={900} height={400}/>
+
+![](https://img.shields.io/static/v1?label=class&message=Jazz&color=cc3311)
+
+![](https://img.shields.io/static/v1?label=class&message=Grime&color=0077bb)
+
+---
+
+### Pr Curves
+<Image src={pr_curves} width={900} height={400}/>
+
+---
+
+### Confusion Matrix
+
+<Image src={cf} width={900} height={400}/>

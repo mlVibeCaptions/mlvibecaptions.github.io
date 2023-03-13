@@ -1,0 +1,59 @@
+# Experiments Archive
+![](https://img.shields.io/static/v1?label=&message=Jan25_22-37-21&color=ee3377)
+
+![](https://img.shields.io/static/v1?label=&message=Jan26_01-48-31&color=bbbbbb)
+
+![](https://img.shields.io/static/v1?label=&message=Jan31_15-40-04&color=009988)
+
+![](https://img.shields.io/static/v1?label=&message=Feb18_21-07-48&color=ff7043)
+
+![](https://img.shields.io/static/v1?label=&message=Feb27_02-30-45&color=33bbee)
+
+
+## Configuration
+| Experiment                                                                       |   Model    | Samples | Sample Rate | hop length | n fft | n mels | Test  |
+|:---------------------------------------------------------------------------------|:----------:|:-------:|:-----------:|:----------:|:-----:|:------:|:-----:|
+| ![](https://img.shields.io/static/v1?label=&message=Jan25_22-37-21&color=ee3377) | CNNNetwork |  22050  |    22050    |    512     | 1024  |   64   | False |
+| ![](https://img.shields.io/static/v1?label=&message=Jan26_01-48-31&color=bbbbbb) | CNNNetwork |  22050  |    22050    |    512     | 1024  |   64   | False |
+| ![](https://img.shields.io/static/v1?label=&message=Jan31_15-40-04&color=009988) |   VGGish   |  44100  |    44100    |    512     | 1024  |   64   | False |
+| ![](https://img.shields.io/static/v1?label=&message=Feb18_21-07-48&color=ff7043) |   VGGish   | 220500  |    44100    |    512     | 1024  |   64   | True  |
+| ![](https://img.shields.io/static/v1?label=&message=Feb27_02-30-45&color=33bbee) |   VGGish   | 220500  |    44100    |    512     | 1024  |   64   | True  |
+
+
+## Training
+| ID                                                                               | Epochs | Batch | Classes |       LR        | samples | Loss | Accuracy |
+|:---------------------------------------------------------------------------------|:------:|:-----:|:-------:|:---------------:|:-------:|:----:|:--------:|
+| ![](https://img.shields.io/static/v1?label=&message=Jan25_22-37-21&color=ee3377) |   10   |  10   |    2    |      0.001      |   60    | 0.58 |   0.71   |
+| ![](https://img.shields.io/static/v1?label=&message=Jan26_01-48-31&color=bbbbbb) |   30   |  20   |    2    |      0.001      |   60    | 0.56 |   0.73   |
+| ![](https://img.shields.io/static/v1?label=&message=Jan31_15-40-04&color=009988) |   20   |  20   |    2    |      0.001      |   60    | 0.39 |   0.85   |
+| ![](https://img.shields.io/static/v1?label=&message=Feb18_21-07-48&color=ff7043) |   50   |  73   |    2    | 0.001 ~ 0.00001 |   146   | 0.14 |   0.95   |
+| ![](https://img.shields.io/static/v1?label=&message=Feb27_02-30-45&color=33bbee) |   30   |  130  |    2    | 0.001 ~ 0.00001 |  1040   | 0.16 |   0.94   |
+
+| ID             |   Model    | Epochs | Batch | Classes |       LR        | samples | Loss | Accuracy |
+|:---------------|:----------:|:------:|:-----:|:-------:|:---------------:|:-------:|:----:|:--------:|
+| Jan25_22-37-21 | CNNNetwork |   10   |  10   |    2    |      0.001      |   60    | 0.58 |   0.71   |
+| Jan26_01-48-31 | CNNNetwork |   30   |  20   |    2    |      0.001      |   60    | 0.56 |   0.73   |
+| Jan31_15-40-04 |   VGGish   |   20   |  20   |    2    |      0.001      |   60    | 0.39 |   0.85   |
+| Feb18_21-07-48 |   VGGish   |   50   |  73   |    2    | 0.001 ~ 0.00001 |   146   | 0.14 |   0.95   |
+| Feb27_02-30-45 |   VGGish   |   30   |  130  |    2    | 0.001 ~ 0.00001 |  1040   | 0.16 |   0.94   |
+
+
+| Metric         | Value  |
+|:---------------|:------:|
+| Model          | VGGish |
+| Epoch          |   9    |
+| Train Accuracy | 0.804  |
+| Valid Accuracy | 0.806  |
+| Train Loss     | 0.4186 |
+| Valid Loss     | 0.4936 |
+
+| Metric         | Value  |
+|:---------------|:------:|
+| Model          | VGGish |
+| Epoch          |   22   |
+| Train Accuracy | 0.935  |
+| Valid Accuracy | 0.838  |
+| Train Loss     | 0.1751 |
+| Valid Loss     | 0.7429 |
+
+

@@ -1,0 +1,46 @@
+import Image from "next/image";
+import grimeImg from '../../data/pre-processing/1/Jan25_19-42-18-experiment-1-grime.png';
+import houseImg from '../../data/pre-processing/1/Jan25_19-46-42-experiment-1-house.png'
+
+## Audio features
+We will try to compare the raw audio data in a spectrogram representation. During the process have been found several cases in whihch the tunes had no audio at the first have of the chopped clip.
+
+## Mel Spectrogram codeblock
+```python
+    n_fft = 1024
+    win_length = None
+    hop_length = 512
+
+    spectrogram = T.Spectrogram(
+        n_fft=n_fft,
+        win_length=win_length,
+        hop_length=hop_length,
+        center=True,
+        pad_mode="reflect",
+        power=2.0,
+    )
+```
+
+### Mel Spectrogram with audio comparison
+![](https://img.shields.io/static/v1?label=label:__&message=house&color=ee3377)
+____
+<Image src={houseImg} width={900} height={900} />
+
+---
+<audio
+    controls
+    src="/mlvcdocs/experiment-1-house.wav">
+</audio>
+
+---
+![](https://img.shields.io/static/v1?label=label:__&message=grime&color=ee3377)
+---
+
+<Image src={grimeImg} width={900} height={900} />
+
+---
+
+<audio
+    controls
+    src="/mlvcdocs/experiment-1-grime.wav">
+</audio>

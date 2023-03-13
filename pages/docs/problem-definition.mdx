@@ -1,0 +1,22 @@
+# Problem definition
+
+Since the theoretical framework of the research was identified in the previous chapters, in this chapter I discuss the implementation process of the audio classifier (ACLF) using CNN architectures. The analysis will be done in stages, exactly in the chronological order and organization that the development was done in the software. Therefore, the methodological analysis is divided into four sections. Data collection, dataset design, data exploration and finally the design of the classification model. From now on, the implemented software in the context of this research will be referred to as machine learning vibe captions (MLVC) and then for each application that supports the overall implementation of it, the corresponding suffix will be added. We will see this later on, you can refer to the glossary for more information.
+Defining Objectives
+Perhaps the most difficult part of designing software that uses DL algorithms and ANNs is formulating the goals. That is, what is the outcome we want to predict and what types of data we need to explore. Obviously, the answer to these questions determines the definition of the problem that we will see next. At the same time, however, it is the objective that will determine the methodology in the development and implementation phase of the DL model.
+
+This research has set the goal already from the beginning which is to predict and recognize the emotional state through listening to an audio experience, formulated as a vibe capture (VC) in real time. As already defined by the theoretical framework, the concept of VC refers to a synthesis of a description of the sound with elements from the feature set in musical terms, details around the way of music composition, emotion, mood, memory, place. That is, during the process of listening to music we ideally want the model we develop to be able to predict in real time the above features and formulate them as a description. To be more successful in illustrating the VC concept I will use the standard model in an example form, formulated in three versions that unfold in time and are generated in real time below.
+Prototypical examples of VC generation are the 3 below.
+
+VC1. sails between ambient and ethereal music
+
+VC2. inspired by soft reverbed vocals and melodious chord progressions
+
+VC3. immersive nostalgic journey in a sea of synthetic strings and choirs.
+
+## Define objectives
+Once the objective has been defined, the next step is to formulate and define the problem. The problem invoked in this research is complex, as the prediction or goal we want to produce through DL is not a predefined class or a predefined label.
+The output data of the model is therefore a sentence that on the one hand should follow the rules of syntax and grammar, and on the other hand should accurately convey meaning and significance as interpretive features resulting from our interaction with sound experience and music. These features should be generated through ACLF. A possible first interpretation of the problem can be formulated as multiclass multilabel multitask classification. That is, a classification problem with multiple input variables, multiple labels and multiple processes.
+
+The main difference between multiclass classification and multitask classification is the number of outcome variables in the model.
+In multi-category classification there is only one outcome variable, whereas in multi-task classification there are many outcome variables that must be considered together. However, the output variables are also directly related to the input dataset and its design. We will address this issue in the next section which is data collection and dataset design for this research. Hence at this point the research undertakes a process of fragmentation of the larger problem into smaller problems.
+

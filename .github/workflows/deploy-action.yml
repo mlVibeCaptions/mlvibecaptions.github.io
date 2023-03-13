@@ -1,0 +1,42 @@
+name: MLVC docs CI
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 6.0.2
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          cache: npm
+#      - name: Install pnpm
+#        run: npm i -g pnpm
+
+      - name: Build 🔧
+        run: |
+          npm ci
+          npm run build
+          touch out/.nojekyll
+
+      - name: Deploy 🚀
+        # https://www.viget.com/articles/host-build-and-deploy-next-js-projects-on-github-pages/
+        # https://github.com/JamesIves/github-pages-deploy-action
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: out # The folder the action should deploy.

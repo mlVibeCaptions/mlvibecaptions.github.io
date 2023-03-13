@@ -1,0 +1,48 @@
+import Image from "next/image";
+import houseImgZero from '../../data/data-explore/Jan25_20-50-33-experiment-2-house-zero.png';
+import houseRandom from '../../data/data-explore/Jan25_20-49-21-experiment-1-house-random-crop-3.png'
+
+# Data exploration
+
+The length of each clip is 5 seconds long.
+
+## Raw audio spectrogram
+![](https://img.shields.io/static/v1?label=label:__&message=house&color=ee3377)
+____
+<Image src={houseImgZero} width={900} height={900} />
+
+This clip starts from the beginning with almost no sound at all. Sound file below for cross reference.
+
+---
+<audio
+    controls
+    src="/mlvcdocs/de-Jan25_20-50-33-experiment-2-house-zero-crop.wav">
+</audio>
+
+---
+![](https://img.shields.io/static/v1?label=label:__&message=grime&color=ee3377)
+---
+
+<Image src={houseRandom} width={900} height={900} />
+
+To avoid empty frequencies, and to feed our model effectively, a random function has been implemented to cut the track at the desired length with a specific offset, to avoid start from 0 frame.
+
+---
+
+<audio
+    controls
+    src="/mlvcdocs/de-experiment-1-house-random-crop-3.wav">
+</audio>
+
+---
+
+## Code implementation
+
+````python
+ def _random_cut(self, signal):
+        if signal.shape[1] > self.num_samples:
+            crop_size = signal.shape[1] - self.num_samples
+            offset = np.random.randint(self.num_samples, crop_size - self.num_samples)
+            signal = signal[:, offset: offset + self.num_samples]
+        return signal
+````

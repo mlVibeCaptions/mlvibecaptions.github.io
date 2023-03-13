@@ -1,0 +1,27 @@
+# Design
+
+For the proof of concept of this project, it was crucial to collect a large amount of tunes. These tunes are available by streaming platforms these, in
+which are labeled or tagged. Tagging and labeling is crucial for model training's performance and legitimacy later on. However, tagging is not always accurate on these platforms,
+nd especially in terms of the genre. The main decision was made, is to extract the super genre from each track found on some online streaming services and set it as label at this dataset.
+
+## Shape
+| Key            | type     |                                       value                                        |
+|:---------------|:---------|:----------------------------------------------------------------------------------:|
+| id             | Long     |                                     0011101101                                     |
+| artist         | String   |                                                                                    |
+| artwork_url    | String   |                                                                                    |
+| audio_file     | File     |                                                                                    |
+| title          | String   |                                                                                    |
+| caption        | String   |                                                                                    |
+| comments_count | Number   |                                                                                    |
+| likes_count    | Number   |                                                                                    |
+| reposts_count  | Number   |                                                                                    |
+| playback_count | Number   |                                                                                    |
+| description    | Number   |                                                                                    |
+| tag_list       | String[] |                                                                                    |
+| genre          | String   | Classical, Techno, Grime, Jazz, House, Drum & bass, Jungle, Ambient, Hip Hop & Rap |
+| record label   | String   |                                                                                    |
+| track_type     | Enum     |                                                                                    |
+| track_id       | Long     |                                                                                    |
+| transcoding_id | Long     |                                                                                    |
+| class_id       | Integer  |                                                                                    |

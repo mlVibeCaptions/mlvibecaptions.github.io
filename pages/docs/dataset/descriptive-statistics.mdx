@@ -1,0 +1,60 @@
+import Image from "next/image";
+import value_counts from '../../../data/descriptive-statistics/descriptive-statistics-1.png';
+import duration_mean from '../../../data/descriptive-statistics/genre_duration_mean.png';
+import density_duration from '../../../data/descriptive-statistics/density_duration.png';
+
+
+# Descriptive statistics
+Data collection has not yet finished. However, at this stage it is needed to be presented descriptive statistics of the dataset, as well as the table structure.
+
+## Shape of data
+Collected data so far consists of 11406 rows (samples) and 21 columns
+
+| Genre       |  Samples |
+| ----------- | ----------- |
+|Classical|      3068|
+|Techno    |     2271|
+|Grime      |    2129|
+|Jazz        |   2105|
+|House        |  1048|
+|Drum & bass     |  321|
+|Jungle         | 175|
+|Ambient         |172|
+|Hip Hop & Rap     |117|
+|Total     |11406|
+
+## Plots
+
+### Sample counts per genre
+
+<Image src={value_counts} width={1200} height={600}/>
+
+
+### Duration mean per genre
+
+<Image src={duration_mean} width={900} height={400}/>
+
+### Samples density
+
+<Image src={density_duration} width={900} height={400}/>
+
+
+### Descriptive table
+
+`duration in minutes`
+
+|      Genre     |count           |mean              |std               |min              |25%               |50%               |75%               |max              |
+|-----------|----------------|------------------|------------------|-----------------|------------------|------------------|------------------|-----------------|
+|genre      |                |                  |                  |                 |                  |                  |                  |                 |
+|ambient    |172.0           |5.186744186046512 |1.8985070371844568|0.5              |3.7504375         |4.989166666666666 |6.3459666666666665|9.902183333333333|
+|classical  |3068.0          |4.180448114950021 |2.504921876539033 |0.5              |2.4812541666666665|3.8580249999999996|5.828154166666667 |9.987966666666667|
+|drum_bass  |321.0           |3.836798701973001 |1.2486624173786247|2.00055          |2.528             |4.145583333333334 |4.78215           |7.072            |
+|grime      |2129.0          |3.5618899639893535|1.1215141589436597|0.5              |2.9151            |3.3735833333333334|3.925683333333333 |9.959666666666667|
+|hip_hop_rap|117.0           |3.4764621082621088|0.9872640650994569|2.106333333333333|2.9107166666666666|3.336133333333333 |3.776             |7.969366666666667|
+|house      |1048.0          |4.377509653307888 |1.4956277952178987|0.5              |3.2272833333333333|4.057833333333333 |5.2051541666666665|9.671433333333333|
+|jazz       |2105.0          |1.8693912589073634|2.0599658192828008|0.5              |0.5               |0.5               |3.233433333333333 |9.826            |
+|jungle     |175.0           |4.231112476190477 |1.809614914353829 |2.00115          |2.6578583333333334|3.7259333333333333|5.467275          |9.451983333333333|
+|techno     |2271.0          |5.357881263760458 |2.1071908185845887|0.5              |3.9156166666666667|5.679016666666667 |6.839808333333334 |9.99885          |
+
+
+

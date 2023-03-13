@@ -1,0 +1,55 @@
+{
+  "abstract": {
+    "title": "Abstract",
+    "theme": {
+      "typesetting": "article",
+      "layout": "full"
+    }
+  },
+  "Research Objectives": {
+    "type": "separator",
+    "title": "Research Objectives"
+  },
+  "problem-definition": "Problem definition",
+  "limitations": "Limitations",
+  "Project Architecture": {
+    "type": "separator",
+    "title": "Project Architecture"
+  },
+  "dl-pipeline": "DL Pipeline",
+  "technology-stack": "Technology Stack",
+  "Collecting data": {
+    "type": "separator",
+    "title": "Data Collection"
+  },
+  "scraping": "Scraping",
+  "dataset": "Dataset",
+  "Exploratory analysis": {
+    "type": "separator",
+    "title": "Exploratory data analysis"
+  },
+  "data-exploration": "Audio Analysis",
+  "feature-extraction": "Feature Extraction",
+  "pre-processing": "Pre-processing",
+  "convolutional_network": {
+    "type": "separator",
+    "title": "Model"
+  },
+  "cnn": "Convolutional Neural Network (CNN)",
+  "architecture": "Architecture",
+  "training": "Training",
+  "performance": "Performance",
+  "Conclusion": {
+    "type": "separator",
+    "title": "Conclusions"
+  },
+  "contribution": "Contribution",
+  "discussion": "Discussion",
+  "endnotes": {
+    "type": "separator",
+    "title": "Endnotes"
+  },
+  "sources": "Sources",
+  "references": "References",
+  "audio-datasets": "Audio Datasets"
+}

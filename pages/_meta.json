@@ -1,0 +1,53 @@
+{
+  "index": {
+    "title": "Home",
+    "type": "page",
+    "display": "hidden",
+    "theme": {
+      "typesetting": "article",
+      "layout": "full",
+      "breadcrumb": true,
+      "footer": true,
+      "sidebar": false,
+      "toc": true,
+      "pagination": false
+    }
+  },
+  "docs": {
+    "title": "Research",
+    "type": "page"
+  },
+  "dataset": {
+    "title": "Dataset",
+    "type": "page",
+    "theme": {
+      "typesetting": "article",
+      "layout": "default",
+      "breadcrumb": true,
+      "footer": true,
+      "sidebar": true,
+      "toc": true,
+      "pagination": true
+    }
+  },
+  "experiments":{
+  "title": "Experiments",
+    "type": "page"
+},
+  "technology": {
+    "title": "Technology",
+    "type": "menu",
+    "items": {
+      "pytorch": {
+        "title": "Pytorch",
+        "href": "https://pytorch.org/",
+        "newWindow": true
+      },
+      "torchaudio": {
+        "title": "torch audio",
+        "href": "https://pytorch.org/audio/stable/index.html",
+        "newWindow": true
+      }
+    }
+  }
+}

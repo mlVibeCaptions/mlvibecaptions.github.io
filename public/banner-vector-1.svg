@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="1920px" height="1080px" viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:none;}
+	.st2{font-family:'GTAmericaLG-ExpBl';}
+	.st3{font-size:42px;}
+	.st4{font-size:25px;}
+</style>
+<g>
+	<g>
+		<path class="st0" d="M578.6,484c-3.8,11-7.2,20.1-8.2,28.6h-0.6c-0.9-8.5-4.4-17.3-8.2-27.9l-39.9-113.3h-119v222.9h69.7V471.8
+			c0-15.1-0.3-32.3-3.1-47.1h1.3c2.8,10.7,7.8,27.6,14.1,44.9l45.5,124.6H605l48.3-125.3c6-15.1,13.2-36.4,15.1-44.3h1.6
+			c-2.8,16.3-4.4,33-4.4,47.1v122.4h73.5V371.3H616.9L578.6,484z"/>
+		<polygon class="st0" points="844.1,371.3 763.8,371.3 763.8,594.2 984.8,594.2 984.8,532.7 844.1,532.7 		"/>
+		<path class="st0" d="M1151.6,371.3l-58.4,137.2c-3.8,8.8-5.6,16-7.2,23.9h-1.3c-1.6-7.8-3.5-15.1-7.2-23.9l-58.4-137.2H930
+			l106.7,222.9h97.3l106.7-222.9H1151.6z"/>
+		<path class="st0" d="M1373.5,541.8c-41.1,0-65.6-22.3-65.6-59c0-36.4,24.8-59.3,65.3-59.3c33.3,0,54,13.8,60.9,39.6l82.9-15.7
+			c-15.1-51.5-70-83.5-143.8-83.5c-87.9,0-150.1,49.9-150.1,120.2c0,71.9,57.4,117.7,147.5,117.7c74.4,0,127.8-29.8,146-81
+			l-82.2-18.2C1428.2,527.9,1406.5,541.8,1373.5,541.8z"/>
+	</g>
+	<rect x="402.8" y="614" class="st1" width="1114.2" height="102.4"/>
+	<text transform="matrix(1 0 0 1 402.8449 644.4276)"><tspan x="0" y="0" class="st0 st2 st3">MACHINE LEARNING VIBE CAPTIONING</tspan><tspan x="0" y="30" class="st0 st2 st4">a deep learning research on convolutional neural network </tspan><tspan x="0" y="60" class="st0 st2 st4">models for multitask audio classification</tspan></text>
+</g>
+</svg>

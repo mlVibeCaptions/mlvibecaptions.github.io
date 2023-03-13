@@ -1,0 +1,13 @@
+import Image from "next/image";
+import data from '/data/cnn/data-split.png';
+
+# Training
+
+In the previous section I presented the implementation and configuration of the CNN architectural approaches used in this research to create an ACLF. Now, in this section I detail the training and evaluation phase of the DL model and by extension the CNN.
+
+## Training Implementation
+In this section I present the implementation of the training class of the DL model. The fundamental method for conducting the training process is the training loop. This method defines how many times all samples in the dataset will be passed through the CNN model, i.e. it defines the number of iterations. Each complete iteration, in which all samples have passed through the model is called an epoch (epoch ). Because in ACLF problems usually as in this research we have to manage datasets with very large volume, the input of samples into the CNN is done in batches (batch ). The size of the batch is a numerical value and is controlled through the super parameters of the DL model.
+
+## Data Split
+
+<Image src={data} width={900} height={400}/>

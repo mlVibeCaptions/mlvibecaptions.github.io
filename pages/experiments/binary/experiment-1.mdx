@@ -1,0 +1,98 @@
+import loss_batch from '../../../data/experiment-1/loss-acc-batch.png';
+import acc from '../../../data/experiment-1/acc-Jan25_22-37-21.png';
+import loss from '../../../data/experiment-1/Jan25_22-37-21-loss.png';
+import classs from '../../../data/experiment-1/class-Jan25_22-37-21.png';
+import conv from '../../../data/experiment-1/conv-Jan25_22-37-21.png';
+import linear_histogram from '../../../data/experiment-1/linear-Jan25_22-37-21.png'
+import cf from '../../../data/experiment-1/cf-Jan25_22-37-21.png';
+import Image from "next/image";
+
+
+# Experiment 1
+![](https://img.shields.io/static/v1?label=Tensorboard_log&message=Jan25_22-37-21&color=ee3377)
+
+Binary classification with VGGish model architecture. Logs and metrics have been implemented with tensorboard and pytorch.
+
+
+
+## Parameters
+### basic setting parameters
+clip_length: 1.0 # [sec]
+
+### preprocessing parameters
+sample_rate: `22050`
+
+hop_length: `512`
+
+n_fft: `1024`
+
+n_mels: `64`
+
+
+### Training parameters
+
+number of audio samples: `22050`
+
+learning rate: `0.001`
+
+batch size: `10`
+
+number of epochs: `10`
+
+number of samples: `60`
+
+balanced dataset: `True`
+
+random clip cut: `False`
+
+## Classes
+### Labels
+
+` grime `
+` jazz `
+### Class distribution
+
+| Class        | Class ID |    Samples |
+| :------------ | :---------: | ----------: |
+| grime        |    0    | 30 |
+| jazz     |    1     |    30 |
+
+## Results
+### Logs
+````
+...
+Epoch: 10 [30/60 (50%)] Loss: 0.591532 Accuracy: 73.33333333333333%
+Epoch: 10 [60/60 (100%)] Loss: 0.585686 Accuracy: 70.0%
+[Class: grime] accuracy: 86.7 %
+[Class: jazz] accuracy: 56.7 %
+Epoch: [10/10] Loss: 0.588609 Accuracy: 71.66666666666667%
+[[=============================================================================================]]
+````
+
+## Metrics
+### Cross entropy
+
+<Image src={loss} width={900} height={400}/>
+
+### Accuracy
+<Image src={acc} width={900} height={400}/>
+
+### Loss/Accuracy per batch
+<Image src={loss_batch} width={900} height={400}/>
+
+### Accuracy per class
+<Image src={classs} width={900} height={400}/>
+
+![](https://img.shields.io/static/v1?label=class&message=grime&color=ee3377)
+![](https://img.shields.io/static/v1?label=class&message=jazz&color=009988)
+
+### Conv4 Layer
+<Image src={conv} width={900} height={400}/>
+
+### Linear layer
+
+<Image src={linear_histogram} width={900} height={400}/>
+
+### Confusion Matrix
+<Image src={cf} width={900} height={400}/>
+
